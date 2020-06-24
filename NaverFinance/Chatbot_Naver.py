@@ -1,10 +1,12 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))))
 from Chatbot_Setting import *
 import telepot
 from telepot.loop import MessageLoop
 import requests
 import pymysql
 from bs4 import BeautifulSoup
-
 bot = telepot.Bot(TokenN)
 
 
