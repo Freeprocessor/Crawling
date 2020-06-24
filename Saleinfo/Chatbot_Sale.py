@@ -63,14 +63,6 @@ def Chatbot(msg):
                     conn.commit()
                     print("UnSubscribe Success")
                     bot.sendMessage(chat_id, "UnSubscribe Success " + msg['chat']['last_name'] + " " + msg['chat']['first_name'])
-        # if chat_id == 1143142514:
-        #     bot.sendMessage(chat_id, '(Echo)' + msg['text'])
-        #     bot.sendMessage(753311691, '(공지)' + msg['text'])
-        #     bot.sendMessage(1138918706, '(공지)' + msg['text'])
-        # else:
-        #     bot.sendMessage(chat_id, '(Echo)' + msg['text'])
-        #     bot.sendMessage(1143142514, '(' + msg['chat']['first_name'] + ')' + msg['text'])
-
 
 def main():
     MessageLoop(bot, Chatbot).run_forever()
