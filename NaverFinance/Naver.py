@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))))
+=======
+>>>>>>> add
 from Chatbot_Setting import *
 import telepot
 import requests
@@ -11,16 +14,34 @@ from bs4 import BeautifulSoup
 def Crawling():
     i = 19
 
+<<<<<<< HEAD
     res = requests.get('https://finance.naver.com/news/news_list.nhn?mode=LSS2D&section_id=101&section_id2=258',
                        headers={"User-Agent": "Mozilla/5.0"})
 
     soup = BeautifulSoup(res.content, 'html.parser')
 
+=======
+    # 1) reqeusts 라이브러리를 활용한 HTML 페이지 요청
+    # 1-1) res 객체에 HTML 데이터가 저장되고, res.content로 데이터를 추출할 수 있음
+    res = requests.get('https://finance.naver.com/news/news_list.nhn?mode=LSS2D&section_id=101&section_id2=258',
+                       headers={"User-Agent": "Mozilla/5.0"})
+
+    # print(res.content)
+    # 2) HTML 페이지 파싱 BeautifulSoup(HTML데이터, 파싱방법)
+    # 2-1) BeautifulSoup 파싱방법
+    soup = BeautifulSoup(res.content, 'html.parser')
+
+    # 3) 필요한 데이터 검색
+>>>>>>> add
     title_temp = soup.select('li > dl > .articleSubject')
     content_temp = soup.select('li > dl > .articleSummary')
     press_temp = soup.select('li > dl > .articleSummary > span.press')
     time_temp = soup.select('li > dl > .articleSummary > span.wdate')
 
+<<<<<<< HEAD
+=======
+    # 4) 필요한 데이터 추출
+>>>>>>> add
     while i > 0:
         print(title_temp[i].find('a')['title'])
         print("https://finance.naver.com" + title_temp[i].find('a')['href'])
@@ -86,6 +107,21 @@ def SandTelegram(title, href, content, press, time):
             TeleMessage = "<a href=\"" + href + "\">" + title + "</a>" + "\n" + "\n" + content + "\n" + press + "\n" + time
             bot.sendMessage(int(userID), TeleMessage, 'HTML')
 
+<<<<<<< HEAD
+=======
+
+    # mc = "753311691"
+    # bot = telepot.Bot(token)
+    # TeleMessage = "<a href=\"" + href + "\">" + title + "</a>" + "\n" + "\n" + content + "\n" + press + "\n" + time
+    # bot.sendMessage(mc, TeleMessage, 'HTML')
+
+    # mc = "1138918706"
+    # bot = telepot.Bot(token)
+    # TeleMessage = "<a href=\"" + href + "\">" + title + "</a>" + "\n" + "\n" + content + "\n" + press + "\n" + time
+    # bot.sendMessage(mc, TeleMessage, 'HTML')
+
+
+>>>>>>> add
 def main():
     Crawling()
 

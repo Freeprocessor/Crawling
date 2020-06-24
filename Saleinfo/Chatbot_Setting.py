@@ -1,0 +1,4 @@
+TokenN = '1184760134:AAHVBIkC1ERDrrH2NISG-ndONXB7kY-8fUY'
+TokenS = '1285344924:AAFqsl8qxu8z-AZ8kp4QWaN6Ma_-6BNRcQM'
+DBPassword = 'dnjsals1004'
+DBID = 'wmlee97'
