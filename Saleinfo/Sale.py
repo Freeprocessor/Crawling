@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))))
-=======
->>>>>>> add
 from Chatbot_Setting import *
 import telepot
 import requests
@@ -133,21 +130,6 @@ def SandTelegram(title, href, classification, site, time):
             TeleMessage = "<a href=\"" + href + "\">" + title + "</a>" + "\n" + "\n" + classification + "\n" + site + "\n" + time
             bot.sendMessage(int(userID), TeleMessage, 'HTML')
 
-<<<<<<< HEAD
-=======
-
-    # mc = "753311691"
-    # bot = telepot.Bot(token)
-    # TeleMessage = "<a href=\"" + href + "\">" + title + "</a>" + "\n" + "\n" + content + "\n" + press + "\n" + time
-    # bot.sendMessage(mc, TeleMessage, 'HTML')
-
-    # mc = "1138918706"
-    # bot = telepot.Bot(token)
-    # TeleMessage = "<a href=\"" + href + "\">" + title + "</a>" + "\n" + "\n" + content + "\n" + press + "\n" + time
-    # bot.sendMessage(mc, TeleMessage, 'HTML')
-
-
->>>>>>> add
 def main():
     Crawling("Ppomppu")
     Crawling("QuasarZone")
