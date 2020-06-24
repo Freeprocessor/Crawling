@@ -1,1 +1,1 @@
-python C:\Users\wmlee\Desktop\Sale.py
+python C:\Users\wmlee\Desktop\Crawling\Saleinfo.py
